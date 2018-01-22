@@ -1,0 +1,420 @@
+paths:
+  /devices:
+    post:
+      tags:
+        - device
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: device.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+    patch:
+      tags:
+        - device
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: device.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+    put:
+      tags:
+        - device
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: device.replaceOrCreate__put_devices
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+    get:
+      tags:
+        - device
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: device.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/device'
+      deprecated: false
+  /devices/replaceOrCreate:
+    post:
+      tags:
+        - device
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: device.replaceOrCreate__post_devices_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+  /devices/upsertWithWhere:
+    post:
+      tags:
+        - device
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: device.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+  '/devices/{id}/exists':
+    get:
+      tags:
+        - device
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'device.exists__get_devices_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/devices/{id}':
+    head:
+      tags:
+        - device
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'device.exists__head_devices_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - device
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: device.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+    put:
+      tags:
+        - device
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'device.replaceById__put_devices_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+    delete:
+      tags:
+        - device
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: device.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - device
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: device.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/device'
+        - name: id
+          in: path
+          description: device id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+  '/devices/{id}/replace':
+    post:
+      tags:
+        - device
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'device.replaceById__post_devices_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+  /devices/findOne:
+    get:
+      tags:
+        - device
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: device.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/device'
+      deprecated: false
+  /devices/update:
+    post:
+      tags:
+        - device
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: device.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/device'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /devices/count:
+    get:
+      tags:
+        - device
+      summary: Count instances of the model matched by where from the data source.
+      operationId: device.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  device:
+    properties:
+      deviceId:
+        type: string
+      friendlyName:
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - deviceId
+      - friendlyName
+    additionalProperties: false
+  x-any:
+    properties: {}
+  ObjectID:
+    type: string
+    pattern: "^[a-fA-F\\d]{24}$"
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: loopbackgettingstarted
+  version: 1.0.0
+  title: LoopbackGettingStarted
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
