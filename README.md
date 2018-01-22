@@ -1,4 +1,7 @@
 [![Loopback Logo](https://loopback.io/images/loopback_logo.png)](https://loopback.io/doc/index.html)
+
+## Loopback
+
 LoopBack is a highly-extensible, open-source Node.js framework that enables you to create dynamic end-to-end REST APIs with little or no coding.
 
 ## Description
@@ -15,13 +18,13 @@ This is a simple NodeJS Loopback application
 
 - If the StrongLoop API explorer is installed globally, but the application doesn't see it, install it locally using this solution:
 
- - Install StrongLoop locally like this
+-- Install StrongLoop locally like this
 
 ``` sh
 npm install loopback-component-explorer --save-dev
 ```
 
- - And create a file ./server/component-config.json that contains:
+-- And create a file ./server/component-config.json that contains:
 ``` sh
 {
   "loopback-component-explorer": {
