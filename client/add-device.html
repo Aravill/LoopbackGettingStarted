@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 
 <head>
-  <title>Home</title>
+  <title>Add Device</title>
 </head>
 
 <body>
@@ -12,10 +12,10 @@
       <div id="navbarColor02" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link active">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="add-device.html" class="nav-link">Add Device</a>
+            <a href="add-device.html" class="nav-link active">Add Device</a>
           </li>
           <li class="nav-item">
             <a href="device-list.html" class="nav-link">Device List</a>
@@ -29,11 +29,23 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="bs-component">
-          <h1>This is a simple Loopback app</h1>
+          <form>
+            <fieldset>
+              <legend>Add Device</legend>
+              <div class="form-group">
+                <label for="devId">Device ID</label>
+                <input id="devId" type="text" placeholder="Enter device ID" class="form-control" autofocus/></br>
+                <label for="fName">Device Name</label>
+                <input id="fName" type="text" placeholder="Enter device name" class="form-control" /></br>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
   </div>
+  <script src="./src/add-device.js"></script>
 </body>
 
 </html>

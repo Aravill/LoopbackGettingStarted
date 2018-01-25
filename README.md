@@ -34,3 +34,5 @@ npm install loopback-component-explorer --save-dev
 ```
 ## Resources
 - [Loopback documentation](https://loopback.io/doc/index.html)
+- [Bootswatch CSS Styles](https://bootswatch.com/cosmo/)
+- [Cosmo CSS Documentation](https://bootswatch.com/cosmo/?optionsRadios=option1)
