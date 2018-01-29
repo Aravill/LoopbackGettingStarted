@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 
 <head>
-  <title>Home</title>
+  <title>Device List</title>
 </head>
 
 <body>
@@ -27,16 +27,35 @@
   </br>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <p class="bs-component">
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">Device</li>
-          </ul>
+          <table class="table table-hover">
+            <thead>
+              <tr class="table-primary">
+                <th scope="col">Device ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">ID</th>
+                <th scope="col">Select</th>
+              </tr>
+            </thead>
+            <form id="deviceForm">
+              <tbody id="deviceList">
+                <tr>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+              </tbody>
+            </form>
+          </table>
+        </p>
       </div>
     </div>
     <br />
     <p class="bs-component">
-      <button type="button" class="btn btn-primary">Refresh</button>
+      <button type="button" class="btn btn-primary" onclick="refreshList()">Refresh</button>
+      <button type="button" class="btn btn-primary" onclick="deleteDevices()">Delete</button>
   </div>
   </div>
   </div>
