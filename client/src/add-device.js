@@ -12,10 +12,11 @@ function submitForm(e) {
     //Log upon resolving
     console.log("Response received", response);
     window.alert("Success! Device added.");
-  }).catch(function(err) {
+  })
+  /* .catch(function(err) {
     console.error('Error! \n', err);
     window.alert("Error!", err);
-  });
+  }); */
   //Clear the text fields
   document.querySelector("#devId").value = "";
   document.querySelector("#fName").value = "";
@@ -27,8 +28,7 @@ function makeRequest(device) {
     //Create a request object
     let request = new XMLHttpRequest();
     //Request address
-    let http = `http://localhost:33888/api/devices/adddevice?devId=${device.devId}&fName=${device.fName}`
-    console.log(http);
+    let http = `http://localhost:3000/api/devices/addDevice?devId=${device.devId}&fName=${device.fName}`
     //Open HTTP connection
     request.open('POST', http, true);
     //Define what happens upon receiving data
@@ -42,6 +42,6 @@ function makeRequest(device) {
       reject(request.response);
     }
     //Send HTTP request
-    request.send(``);
+    request.send(' ');
   });
 };

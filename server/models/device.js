@@ -38,8 +38,8 @@ module.exports = function(Device) {
 
   Device.remoteMethod("addDevice", {
     http: {
-      path: "/adddevice",
-      verb: "get"
+      path: "/addDevice",
+      verb: "post"
     },
     accepts: [{
       arg: 'devId',
